@@ -10,6 +10,8 @@ import './OnlyBartPage.css'
 import siteConfig from '../../config/siteConfig'
 import Footer from "../../components/Footer/Footer.tsx";
 
+const onlyBartFallbackLogo = `${import.meta.env.BASE_URL}img/logo128.png`
+
 // Types based on DB schema
 interface Post {
     id: string
@@ -379,7 +381,7 @@ function PostCard({post, access, onDelete, onLikeChange}: {
         <div className="post-card">
             <div className="post-header">
                 <div className="post-avatar">
-                    <img src={siteConfig.onlyBart?.logoUrl || "/img/logo128.png"} alt="Avatar"
+                    <img src={siteConfig.onlyBart?.logoUrl || onlyBartFallbackLogo} alt="Avatar"
                          style={{width: '100%', height: '100%', borderRadius: '50%'}}/>
                 </div>
                 <div className="post-meta">
@@ -651,7 +653,7 @@ export function OnlyBartPage() {
         <div className="onlybart-container">
             {showIntro && (
                 <div className="onlybart-intro">
-                    <img src={siteConfig.onlyBart?.logoUrl || "/img/logo128.png"} alt="Logo" className="intro-logo"/>
+                    <img src={siteConfig.onlyBart?.logoUrl || onlyBartFallbackLogo} alt="Logo" className="intro-logo"/>
                 </div>
             )}
 
@@ -660,7 +662,7 @@ export function OnlyBartPage() {
                 <div className="flex justify-between items-center mb-6">
                     <div className="flex items-center gap-2">
                         <img
-                            src={siteConfig.onlyBart?.logoUrl || "/img/logo128.png"}
+                            src={siteConfig.onlyBart?.logoUrl || onlyBartFallbackLogo}
                             alt="Logo"
                             className="ob-logo"
                         />

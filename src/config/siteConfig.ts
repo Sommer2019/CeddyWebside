@@ -57,26 +57,6 @@ export interface OnlyBartConfig { // New interface for OnlyBart settings
     logoUrl: string;
 }
 
-export interface ImpressumConfig {
-  name: string
-  company: string
-  street: string
-  city: string
-  email: string
-}
-
-export interface StreamplanCategory {
-  id: string
-  labelKey: string
-  url: string
-  color: string
-}
-
-export interface StreamplanConfig {
-  icsUrl: string
-  categories: StreamplanCategory[]
-}
-
 export interface StreamElementsConfig {
   donationUrl: string
   triggers: DonationTrigger[]
@@ -94,6 +74,8 @@ export interface SiteConfig {
   onlyBart: OnlyBartConfig  // Should contain the default "OnlyBart" for this project
   redirects: Record<string, string> // Add redirects here
 }
+
+const withBase = (assetPath: string) => `${import.meta.env.BASE_URL}${assetPath.replace(/^\/+/, '')}`
 
 const siteConfig: SiteConfig = {
   // ── Profil ──
@@ -124,7 +106,7 @@ const siteConfig: SiteConfig = {
       titleKey: 'links.clipdesmonats.title',
       descKey: 'links.clipdesmonats.desc',
       url: '/clipdesmonats',
-      icon: '/img/logos/cdm.webp',
+      icon: withBase('img/logos/cdm.webp'),
       target: '_self',
     },
     {
@@ -132,7 +114,7 @@ const siteConfig: SiteConfig = {
       titleKey: 'links.youtube.title',
       descKey: 'links.youtube.desc',
       url: 'https://www.youtube.com/@CurlyCeddy',
-      icon: '/img/logos/youtube.svg',
+      icon: withBase('img/logos/youtube.svg'),
       target: '_blank',
     },
     {
@@ -140,7 +122,7 @@ const siteConfig: SiteConfig = {
       titleKey: 'links.onlybart.title',
       descKey: 'links.onlybart.desc',
       url: '/onlybart',
-      icon: '/img/logos/OB.webp',
+      icon: withBase('img/logos/OB.webp'),
       target: '_self',
     },
     {
@@ -148,7 +130,7 @@ const siteConfig: SiteConfig = {
       titleKey: 'links.discord.title',
       descKey: 'links.discord.desc',
       url: 'https://discord.gg/9cgUxM34ym',
-      icon: '/img/logos/discord.svg',
+      icon: withBase('img/logos/discord.svg'),
       target: '_blank',
     },
     {
@@ -156,7 +138,7 @@ const siteConfig: SiteConfig = {
       titleKey: 'links.email.title',
       descKey: 'links.email.desc',
       url: 'mailto:curlyceddy@gmail.com?subject=Kontaktanfrage',
-      icon: '/img/logos/email.svg',
+      icon: withBase('img/logos/email.svg'),
       target: '_self',
     },
   ],
@@ -168,15 +150,12 @@ const siteConfig: SiteConfig = {
       titleKey: 'games.bartclicker.title',
       descKey: 'games.bartclicker.desc',
       url: '/bartclicker',
-      icon: '/img/logos/bartclicker.svg',
+      icon: withBase('img/logos/bartclicker.svg'),
       target: '_self',
     },
   ],
 
-  footerLinks: [
-    { labelKey: 'footer.impressum', url: '/impressum' },
-    { labelKey: 'footer.datenschutz', url: '/datenschutz' },
-  ],
+  footerLinks: [],
 
   streamelements: {
     donationUrl: 'https://streamelements.com/curlyceddy/tip',
@@ -189,7 +168,7 @@ const siteConfig: SiteConfig = {
   
   onlyBart: {
     title: 'OnlyBart',
-    logoUrl: '/img/logos/OB.webp'
+    logoUrl: withBase('img/logos/OB.webp')
   },
 
   // ── Redirects ──

@@ -68,8 +68,6 @@ export default function SettingsBar() {
           aria-label={t('settings.language')}
         >
           <option value="de">🇩🇪 Deutsch</option>
-          <option value="en">🇬🇧 English</option>
-          <option value="gsw">🇨🇭 Schweizerdeutsch</option>
         </select>
 
         <button
