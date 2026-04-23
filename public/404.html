@@ -7,7 +7,8 @@
       // Single Page Apps for GitHub Pages
       // MIT License
       // https://github.com/rafgraph/spa-github-pages
-      const segmentCount = 0;
+      // Project Pages unter /CeddyWebside/ -> erstes URL-Segment behalten
+      const segmentCount = 1;
       const l = window.location;
       let newPath = l.pathname.split("/").slice(0, 1 + segmentCount).join("/");
       if (newPath === "") { newPath = "/"; }

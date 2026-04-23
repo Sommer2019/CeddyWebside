@@ -208,13 +208,14 @@ export default function ModerateSettingsPage() {
   async function loginForSync() {
     // Speichere den aktuellen Pfad für Redirect nach Login
     sessionStorage.setItem('auth-redirect-path', window.location.pathname || '/moderate/settings')
+    const redirectTo = new URL(`${import.meta.env.BASE_URL}moderate/settings`, window.location.origin).toString()
     await supabase.auth.signInWithOAuth({
       provider: 'twitch',
       options: {
         // Standard-Scopes von Supabase + moderation:read + channel:manage:moderators für Mod-Liste
         // AND channel:read:vips + channel:read:subscriptions for OnlyBart
         scopes: 'user:read:email moderation:read channel:manage:moderators channel:read:vips channel:read:subscriptions',
-        redirectTo: window.location.origin + '/moderate/settings',
+        redirectTo,
         queryParams: { force_verify: 'true' },
       },
     })

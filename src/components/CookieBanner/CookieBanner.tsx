@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import './CookieBanner.css'
 
 const STORAGE_KEY = 'cookie-consent'
@@ -25,7 +26,7 @@ export default function CookieBanner() {
       <div className="cookie-banner-content">
         <div className="cookie-banner-text">
           {t('cookieBanner.text')}{' '}
-          <a href="/datenschutz">{t('cookieBanner.privacyLink')}</a>.
+          <Link to="/datenschutz">{t('cookieBanner.privacyLink')}</Link>.
         </div>
         <div className="cookie-banner-buttons">
           <button className="btn btn-accept" onClick={handleAccept}>
