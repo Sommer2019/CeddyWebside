@@ -1,0 +1,152 @@
+.live-section {
+  margin: 12px 0;
+}
+
+.embed-card {
+  background: var(--box-gradient);
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid var(--box-border);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+}
+
+.embed-card a {
+  text-decoration: none;
+}
+
+.embed-title {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.embed-row {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.embed-player {
+  flex: 1 1 0;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.embed-player iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.embed-chat {
+  flex: 0 0 220px;
+  max-width: 420px;
+  min-height: 400px;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.embed-chat iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.chat-fallback {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.chat-fallback a {
+  color: var(--accent);
+}
+
+.embed-row--hidden {
+  /* Anstatt position: absolute nutzen wir ein kontrolliertes Verstecken */
+  height: 0;
+  min-height: 0 !important;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* WICHTIG: Auch der Player-Container darin muss klein werden */
+.embed-row--hidden .embed-player {
+  min-height: 0 !important;
+  height: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .embed-row {
+    flex-direction: column;
+  }
+  .embed-chat {
+    display: none;
+  }
+  .embed-player {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 720px) {
+  .embed-player {
+    min-height: 220px;
+    aspect-ratio: auto;
+  }
+  .embed-chat {
+    display: block;
+    flex: 0 0 auto;
+    max-width: none;
+    height: 380px;
+    min-height: 380px;
+  }
+  .embed-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .embed-player {
+    min-height: 180px;
+    width: 100% !important;
+    max-width: 100vw;
+  }
+  .embed-card {
+    padding: 8px;
+  }
+}
+
+.points-reward-section-wrapper {
+  width: 100%;
+  display: block; /* Sicherer als flex, wenn es nur ein Container ist */
+  margin-top: 20px; /* Erzwingt Abstand nach oben, auch wenn der Player weg ist */
+}
+
+@media (min-width: 901px) {
+  .points-reward-section-wrapper {
+    width: 100%;
+    max-width: 900px;
+    /* Passe ggf. an die Breite deiner .embed-row an */
+  }
+}
+
+@media (max-width: 900px) {
+  .points-reward-section-wrapper {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

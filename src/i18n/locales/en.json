@@ -1,0 +1,793 @@
+{
+  "settings": {
+    "theme": "Theme",
+    "language": "Language",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "hero": {
+    "subtitle": "FullHD – Gaming, Streams & Clips"
+  },
+  "mobileToggle": {
+    "live": "Live",
+    "links": "Links",
+    "games": "Games",
+    "ariaLabel": "Switch view"
+  },
+  "sections": {
+    "games": "Game-Related Links",
+    "clips": "Clips & Shorts",
+    "partners": "Partners"
+  },
+  "live": {
+    "title": "🔴 Live",
+    "offlineTitle": "Currently offline",
+    "nextStream": "Next Stream",
+    "scheduleLoading": "Loading schedule…",
+    "seeSchedule": "View full schedule →",
+    "chatFallback": "Open chat in new tab",
+    "sectionLabel": "Live stream section"
+  },
+  "currentGame": {
+    "label": "Currently playing game",
+    "nowPlaying": "Now Playing",
+    "storesLabel": "Find on stores",
+    "opensInNewTab": "opens in new tab",
+    "stores": {
+      "twitch": "Twitch",
+      "steam": "Steam",
+      "epic": "Epic Games",
+      "nintendo": "Nintendo",
+      "psstore": "PlayStation",
+      "xbox": "Xbox"
+    }
+  },
+  "links": {
+    "streamplan": {
+      "title": "Stream Schedule",
+      "desc": "Live dates"
+    },
+    "streamelements": {
+      "title": "StreamElements",
+      "desc": "Donations + List"
+    },
+    "clipdesmonats": {
+      "title": "Clip of the Month",
+      "desc": "Vote for the top clips"
+    },
+    "youtube": {
+      "title": "YouTube",
+      "desc": "Main channel"
+    },
+    "tiktok": {
+      "title": "TikTok",
+      "desc": "Main channel"
+    },
+    "instagram": {
+      "title": "Instagram",
+      "desc": "Main channel"
+    },
+    "onlybart": {
+      "title": "OnlyBart",
+      "desc": "Exklusive content"
+    },
+    "discord": {
+      "title": "Discord",
+      "desc": "Join server"
+    },
+    "email": {
+      "title": "Contact",
+      "desc": "Contact via email"
+    }
+  },
+  "games": {
+    "tanggle": {
+      "title": "Tanggle.io",
+      "desc": "Puzzle along live"
+    },
+    "resourcepack": {
+      "title": "Minecraft ResourcePack",
+      "desc": "Download"
+    },
+    "bartclicker": {
+      "title": "Bartclicker",
+      "desc": "Play Bartclicker"
+    }
+  },
+  "clips": {
+    "ytShorts": {
+      "title": "YT Shorts",
+      "desc": "Shorts & Clips"
+    },
+    "tiktokClips": {
+      "title": "TikTok Clips",
+      "desc": "Shorts & Clips"
+    },
+    "instaClips": {
+      "title": "Insta Clips",
+      "desc": "Shorts & Clips"
+    }
+  },
+  "partners": {
+    "yvolve": {
+      "title": "Yvolve",
+      "desc": "10% off your entire order"
+    },
+    "nclip": {
+      "title": "NClip"
+    },
+    "frugends": {
+      "title": "Frugends",
+      "desc": "10% off with code FullHD"
+    }
+  },
+  "profile": {
+    "moderate": "Moderation"
+  },
+  "footer": {
+    "impressum": "Imprint",
+    "datenschutz": "Privacy Policy"
+  },
+  "downloadModal": {
+    "title": "Confirm download",
+    "message": "Do you want to download the file:",
+    "cancel": "Cancel",
+    "confirm": "Download"
+  },
+  "confirmModal": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "deleteTitle": "Confirm deletion",
+    "errorTitle": "Error"
+  },
+  "cookieBanner": {
+    "text": "We use cookies to collect anonymized page views and improve our website. For more information, see our",
+    "privacyLink": "Privacy Policy",
+    "accept": "Accept",
+    "reject": "Decline"
+  },
+  "toast": {
+    "codeCopied": "Discount code copied: {{code}}",
+    "downloadStarted": "Download started"
+  },
+  "discountCode": "Code: {{code}}",
+  "back": "← Back",
+  "impressumPage": {
+    "title": "Imprint",
+    "contact": "Contact"
+  },
+  "datenschutzPage": {
+    "title": "Privacy Policy",
+    "responsible": "Responsible Party",
+    "contact": "Contact",
+    "votingTitle": "Participation in Polls (Twitch Voting)",
+    "votingIntro": "To participate in polls (e.g. clip voting), you must log in with your Twitch account. Your Twitch user ID and, if applicable, your display name are stored to ensure the integrity of the poll and prevent multiple votes.",
+    "processingTitle": "Processing upon Interaction",
+    "processingText": "When voting, your Twitch user ID is stored together with your vote. Your IP address is not stored permanently. Authentication is via Twitch OAuth.",
+    "purposeTitle": "Purpose",
+    "purposeText": "Prevention of multiple votes (spam/manipulation protection) and assignment of the vote to an account.",
+    "retentionTitle": "Retention Period",
+    "retentionText": "Votes are automatically deleted after the poll round ends (maximum 10 days). Your Twitch ID may remain stored in pseudonymized form for statistical purposes.",
+    "legalBasisTitle": "Legal Basis",
+    "legalBasisText": "Art. 6(1)(f) GDPR (Legitimate interest in a manipulation-free poll).",
+    "onlyBartTitle": "OnlyBart (exclusive content)",
+    "onlyBartIntro": "OnlyBart is an exclusive area for subscribers, VIPs, and moderators. Access is granted after logging in with your Twitch account. Your Twitch ID, display name, and, if applicable, profile picture are stored. Posts, comments, and likes are linked to your account.",
+    "onlyBartPurposeTitle": "Purpose",
+    "onlyBartPurposeText": "Provision of exclusive content, community interaction, and protection against abuse.",
+    "onlyBartRetentionTitle": "Retention Period",
+    "onlyBartRetentionText": "Posts, comments, and likes remain stored until deleted by the user or moderation.",
+    "bartclickerTitle": "Bartclicker (Game)",
+    "bartclickerIntro": "When playing Bartclicker, your game progress (beard hairs, upgrades, rebirths, etc.) is stored together with your Twitch ID. Your display name is shown on the leaderboard.",
+    "bartclickerPurposeTitle": "Purpose",
+    "bartclickerPurposeText": "Storage of game progress, display of leaderboards and game statistics.",
+    "bartclickerRetentionTitle": "Retention Period",
+    "bartclickerRetentionText": "Game data remains stored as long as your account exists or until you request deletion.",
+    "analyticsTitle": "Page Views and Analytics",
+    "analyticsIntro": "If you give your consent through the cookie banner, we collect anonymized page views to understand and improve the use of our website.",
+    "analyticsProcessingTitle": "Processing",
+    "analyticsProcessingText": "With each page view, the page path, timestamp and any referral information is stored. No personal data such as IP addresses is stored.",
+    "analyticsPurposeTitle": "Purpose",
+    "analyticsPurposeText": "Analysis of page usage to improve the offering.",
+    "analyticsLegalTitle": "Legal Basis",
+    "analyticsLegalText": "Art. 6(1)(a) GDPR (Consent).",
+    "revokeTitle": "Revocation",
+    "revokeText": "You can revoke your consent at any time by deleting the cookies in your browser or by revisiting our website and declining in the cookie banner.",
+    "rightsTitle": "Your Rights",
+    "rightsText": "You have the right to access, rectification, erasure, restriction of processing, data portability and objection. Please contact us at the address given above."
+  },
+  "streamplanPage": {
+    "title": "Stream Schedule",
+    "intro": "Here you can find the current stream schedule of HD1920x1080. Stay up to date on upcoming live streams and events!",
+    "filter": "Filter",
+    "all": "All",
+    "noEvents": "No events in next 14 days found.",
+    "showMore": "Show more ({{count}} more)",
+    "showLess": "Show less",
+    "icalHint": {
+      "title": "Subscribe to calendar",
+      "desc": "You can subscribe to the stream schedule as a calendar (e.g. in Google Calendar or Apple Calendar).",
+      "copy": "Copy ICS link",
+      "copied": "Link copied!",
+      "google": "Google Calendar: Click the plus (+) in the menu → From URL → Paste link.",
+      "apple": "Apple Calendar: File → New Calendar Subscription → Paste link."
+    }
+  },
+  "streamplan": {
+    "categories": {
+      "gog": "GOG - Good Old Games",
+      "justchatting": "Just Chatting / Reaction",
+      "grind": "Grindgames",
+      "special": "Special Event",
+      "multiplayer": "Multi-player Time",
+      "action": "Action Games"
+    }
+  },
+  "streamelementsPage": {
+    "title": "Donations",
+    "intro": "Here you can find all donation triggers and prices. Click on a trigger for details!",
+    "donateButton": "Donate now",
+    "close": "Close",
+    "donateSpecific": "Donate ({{amount}} €)"
+  },
+  "donations": {
+    "taschengeld": {
+      "desc": "Pocket Money",
+      "text": "Donation sound plays (Thanks from the kids) 🎉"
+    },
+    "tts": {
+      "desc": "TTS",
+      "text": "Text to Speech plays 🔊"
+    },
+    "knock": {
+      "desc": "KnockKnock",
+      "text": "Knock Knock plays 🚪"
+    },
+    "majortom": {
+      "desc": "Major Tom",
+      "text": "Major Tom plays 🧑🏼‍🚀"
+    },
+    "scream": {
+      "desc": "Scream",
+      "text": "Scream plays 😱"
+    },
+    "fliege1": {
+      "desc": "Annoying fly (60 seconds)",
+      "text": "Annoying fly plays 🪰"
+    },
+    "centershock": {
+      "desc": "Sour makes funny – CenterShock",
+      "text": "Stefan eats a CenterShock & sound plays 🍋"
+    },
+    "ytSound": {
+      "desc": "YouTube Members Sound",
+      "text": "YouTube Members Sound plays 🪩"
+    },
+    "fliege2": {
+      "desc": "Fly XXL — 2 minutes",
+      "text": "Very annoying fly plays 🪰"
+    },
+    "1920": {
+      "desc": "1920",
+      "text": "1920 plays ⁉️"
+    },
+    "fliege3": {
+      "desc": "Ultra long fly",
+      "text": "Ultra annoying fly plays 🪰"
+    },
+    "konfetti": {
+      "desc": "Confetti cannon (if available)",
+      "text": "Stefan fires a confetti cannon 🎉"
+    },
+    "hotnuts": {
+      "desc": "8 Hot Nuts + FIRE!!! (if available)",
+      "text": "Stefan eats 8 Hot Nuts & sound plays 🔥"
+    },
+    "sandwich": {
+      "desc": "Satanic Sandwich (if available)",
+      "text": "Stefan eats a satanic sandwich (Oreo + Hotnuts + Centershock) & sound plays 🔥"
+    }
+  },
+  "auth": {
+    "loading": "Loading…",
+    "loginRequired": "Login required",
+    "loginHint": "Sign in with Twitch to access this page.",
+    "loginWithTwitch": "Sign in with Twitch",
+    "loggedInAs": "Logged in as {{name}}",
+    "logout": "Sign out",
+    "requiredTitle": "Authentication required",
+    "requiredMsg": "Please log in to continue."
+  },
+  "error": {
+    "title": "Access denied",
+    "forbidden": "This page is not available to you."
+  },
+  "bartclickerPage": {
+    "title": "Bartclicker",
+    "description": "Click on the bart and earn beard hairs! Buy upgrades, trigger rebirths, and reach the top of the leaderboard."
+  },
+  "moderate": {
+    "forbidden": "Access Denied",
+    "forbiddenHint": "This area is only accessible to moderators and the streamer.",
+    "landingTitle": "Moderation Area",
+    "welcome": "Welcome, {{name}}!",
+    "settings": "Settings",
+    "unknownUser": "Moderator",
+    "loggedInAs": "Logged in as {{name}}",
+    "votingTitle": "Voting Management",
+    "settingsTitle": "Management",
+    "actions": "Actions",
+    "startRound2": "Start Round 2",
+    "endRound2": "End Round 2",
+    "startYearly": "Start Yearly Voting",
+    "endYearly": "End Yearly Voting",
+    "success": "successful",
+    "roundOverview": "Round Overview",
+    "noRounds": "No voting rounds yet.",
+    "modSync": "Sync Moderators",
+    "modSyncHint": "Fetches broadcaster + mods directly from the Twitch API. Requires a fresh login with moderation:read and channel:manage:moderators permissions.",
+    "modSyncWhoCanSync": "Who can sync?",
+    "modSyncBroadcasterCanSync": "✅ Broadcaster (Streamer) – always",
+    "modSyncModeratorCanSync": "✅ Moderators – after initial setup",
+    "modSyncAnyoneCanSync": "✅ Everyone (Bootstrap) – first time only",
+    "modSyncUserCannotSync": "❌ Regular users – not allowed",
+    "syncNow": "Sync now",
+    "syncSyncing": "Syncing…",
+    "loginForSync": "Re-login for sync",
+    "syncMissingScope": "Missing permission – please re-login via \"Re-login for sync\" to get a token with the required scopes (channel:manage:moderators).",
+    "syncSuccess": "{{count}} mods synced{{isBroadcaster}}",
+    "syncError": "Sync failed: {{error}}",
+    "syncErrorForbidden": "You are not allowed to sync. Only the broadcaster or moderators can sync.",
+    "currentMods": "{{count}} moderator(s)",
+    "noMods": "No moderators yet. Use sync or add manually.",
+    "manualAdd": "Add manually",
+    "manualAddHintWithToken": "Enter a Twitch username — the ID will be resolved automatically.",
+    "manualAddHintNoToken": "Without an active sync login you can only enter numeric Twitch user IDs.",
+    "addBtn": "Add",
+    "cannotRemoveSelf": "You cannot remove yourself.",
+    "cannotRemoveBroadcaster": "The broadcaster cannot be removed.",
+    "syncExclusions": "Sync Exclusions",
+    "syncExclusionsHint": "Manually removed mods will not be re-added on the next sync. You can reset the exclusions here.",
+    "syncExclusionsCount": "{{count}} mod(s) excluded",
+    "syncExclusionsNone": "No exclusions.",
+    "resetExclusions": "Reset exclusions",
+    "removeExclusionBtn": "Reset exclusion",
+    "resetExclusionsConfirmTitle": "Reset exclusions?",
+    "resetExclusionsConfirmMsg": "All {{count}} exclusions will be removed. These mods will be re-added on the next sync.",
+    "resetExclusionsSuccess": "{{count}} exclusion(s) reset",
+    "twitchModeration": "Twitch Mod-View",
+    "statisticsTitle": "Statistics",
+    "statisticsDescription": "Overview of voting, traffic, and round data for moderation.",
+    "statisticsRange": "Date range",
+    "statisticsLastDays": "Last {{days}} days",
+    "statisticsRefresh": "Refresh",
+    "statisticsLoading": "Loading dashboard…",
+    "statisticsError": "Could not load dashboard: {{error}}",
+    "statisticsUpdatedAt": "Last update: {{timestamp}}",
+    "statisticsKpiVotes": "Votes cast",
+    "statisticsKpiVoters": "Unique voters",
+    "statisticsKpiViews": "Page views",
+    "statisticsKpiSessions": "Unique sessions",
+    "statisticsKpiConversion": "Votes per view",
+    "statisticsRoundHealth": "Round health",
+    "statisticsNoRound": "No round available.",
+    "statisticsNoData": "No data in the selected range.",
+    "statisticsRound": "Round",
+    "statisticsStatus": "Status",
+    "statisticsMonth": "Month/Year",
+    "statisticsClips": "Clips",
+    "statisticsVotes": "Votes",
+    "statisticsStartsAt": "Start",
+    "statisticsEndsAt": "End",
+    "statisticsTopClips": "Top clips",
+    "statisticsClip": "Clip",
+    "statisticsVoteTrend": "Votes per day",
+    "statisticsViewsTrend": "Page views per day",
+    "statisticsTopPages": "Top pages",
+    "statisticsTopReferrers": "Top referrers",
+    "statisticsLatestWinners": "Latest winners",
+    "statisticsRecentRounds": "Recent rounds",
+    "statisticsPage": "Page",
+    "statisticsViews": "Views",
+    "statisticsReferrer": "Referrer",
+    "accountManagement": "Account / Channel Points Management",
+    "banAccount": "Ban Account",
+    "banInputPlaceholder": "Enter Twitch user ID or username",
+    "banBtn": "Ban",
+    "bannedAccountsTitle": "Banned Accounts",
+    "noBannedAccounts": "No banned accounts",
+    "unbanBtn": "Unban",
+    "channelPoints": "Manage Channel Points",
+    "pointsInputPlaceholder": "Enter Twitch user ID",
+    "resetPoints": "Reset Points",
+    "givePoints": "Set Points",
+    "pointsValuePlaceholder": "Enter points value",
+    "rewards": "Manage Rewards",
+    "rewardsListTitle": "Rewards List",
+    "addRewardBtn": "Add reward",
+    "noRewards": "No rewards available",
+    "editRewardBtn": "Edit",
+    "deleteRewardBtn": "Delete",
+    "enableRewardBtn": "Enable",
+    "disableRewardBtn": "Disable",
+    "rewardEnabled": "Reward enabled!",
+    "rewardDisabled": "Reward disabled!",
+    "rewardInactive": "inactive",
+    "errorTogglingReward": "Error toggling reward: {{msg}}",
+    "editRewardTitle": "Edit Reward",
+    "newRewardTitle": "New Reward",
+    "rewardNameKeyPlaceholder": "Enter name key",
+    "rewardDescKeyPlaceholder": "Enter description key",
+    "rewardNameLabel": "Name",
+    "rewardNamePlaceholder": "Enter displayed name",
+    "rewardDescriptionLabel": "Description",
+    "rewardDescriptionPlaceholder": "Enter reward description",
+    "rewardSourceLabel": "Source",
+    "rewardSourcePlaceholder": "e.g. 'local', 'youtube' or 'tts'",
+    "rewardMediaurlLabel": "Media URL",
+    "rewardMediaurlPlaceholder": "URL to audio/video (if any)",
+    "rewardShowMediaLabel": "Show media",
+    "rewardShowMediaHint": "If enabled, the media (e.g. YouTube video) will be shown/played (if supported)",
+    "rewardImageLabel": "Image URL",
+    "rewardImagePlaceholder": "Enter an image URL",
+    "rewardIsTtsLabel": "Text-to-Speech",
+    "rewardIsTtsHint": "If enabled, the text will be played via TTS",
+    "rewardShowYoutubeVideoLabel": "Show YouTube Video",
+    "rewardShowYoutubeVideoHint": "If enabled, the YouTube video will be shown/played in the stream/overlay (if supported)",
+    "rewardCustomImageLabel": "Custom Image URL",
+    "rewardCustomImagePlaceholder": "URL for a custom image",
+    "rewardTextLabel": "Text",
+    "rewardTextPlaceholder": "Enter text (e.g. for TTS)",
+    "rewardDurationLabel": "Duration (seconds)",
+    "rewardDurationPlaceholder": "Duration in seconds (e.g. 60)",
+    "rewardOncePerStreamLabel": "Once per stream",
+    "rewardOncePerStreamHint": "If enabled, the reward can only be redeemed once per stream",
+    "rewardCostPlaceholder": "Enter cost",
+    "rewardTypePlaceholder": "Enter type",
+    "rewardCooldownPlaceholder": "Cooldown (seconds)",
+    "rewardNameKeyLabel": "Name Key",
+    "rewardDescKeyLabel": "Description Key",
+    "rewardCostLabel": "Cost",
+    "rewardTypeLabel": "Type",
+    "rewardCooldownLabel": "Cooldown (seconds)",
+    "pointsInputLabel": "Enter points",
+    "pointsActionLabel": "Select action",
+    "pointsValueLabel": "Points value",
+    "rewardNameKeyHint": "Key for the displayed reward name (e.g. rewards.foo.name)",
+    "rewardDescKeyHint": "Key for the reward description (e.g. rewards.foo.desc)",
+    "rewardCostHint": "Cost in channel points for this reward",
+    "rewardTypeHint": "Internal type identifier (e.g. sound, custom)",
+    "rewardCooldownHint": "Cooldown in seconds between activations",
+    "instructionsTitle": "Instructions",
+    "instructionsBan": "Ban account:",
+    "deleteRewardConfirmTitle": "Delete reward",
+    "deleteRewardConfirmMessage": "Are you sure you want to delete this reward? This action cannot be undone.",
+    "deleteRewardConfirmConfirmLabel": "Delete",
+    "deleteRewardConfirmCancelLabel": "Cancel",
+    "instructionsBanDesc": "Enter the Twitch user ID or username to ban an account.",
+    "instructionsPoints": "Manage channel points:",
+    "instructionsPointsDesc": "Points can be reset or given.",
+    "instructionsRewards": "Manage rewards:",
+    "instructionsRewardsDesc": "Rewards can be added, edited, or deleted.",
+    "technicalHint": "Technical hint:",
+    "technicalHintPoints": "Points are changed directly in the database.",
+    "technicalHintRewards": "Rewards are applied immediately.",
+    "technicalHintBanned": "Banned accounts can be unbanned at any time.",
+    "noPermission": "No permission",
+    "couldNotFetchTwitchId": "Could not fetch Twitch ID",
+    "cannotBanYourself": "You cannot ban yourself",
+    "errorCheckingUser": "Error checking user: {{msg}}",
+    "modsCanOnlyBanUsers": "Moderators can only ban regular users",
+    "modsCannotUnbanModsOrBroadcaster": "Moderators cannot unban other moderators or the broadcaster",
+    "errorBanning": "Error banning: {{msg}}",
+    "accountBanned": "Account banned!",
+    "errorUnbanning": "Error unbanning: {{msg}}",
+    "accountUnbanned": "Account unbanned!",
+    "invalidTwitchIdReceived": "Invalid Twitch ID received",
+    "errorResettingPoints": "Error resetting points: {{msg}}",
+    "pointsReset": "Points reset!",
+    "pleaseEnterValidPoints": "Please enter a valid points value",
+    "errorFetchingPoints": "Error fetching points: {{msg}}",
+    "errorGivingPoints": "Error giving points: {{msg}}",
+    "pointsGiven": "Points given!",
+    "errorPointsAction": "Error during points action: {{msg}}",
+    "errorSavingReward": "Error saving reward: {{msg}}",
+    "rewardSaved": "Reward saved!",
+    "rewardDeletedFallback": "Reward deleted (direct delete). Note: If this is an RLS issue, create the DB function in Supabase.",
+    "rpcMissingAndDeleteFailed": "Error: RPC function `admin_delete_reward` not found in DB and direct delete failed. Run the SQL in `supabase/db_anleitung_allgemein.sql` or contact the DB admin.",
+    "rpcMissingAndDeleteFailedShort": "Error: RPC function `admin_delete_reward` missing and direct delete failed. Run the SQL in `supabase/db_anleitung_allgemein.sql`.",
+    "errorDeletingReward": "Error deleting reward: {{msg}}",
+    "rewardDeleted": "Reward deleted!",
+    "recentRedemptionsTitle": "Recent Redemptions",
+    "recentRedemptionsRefresh": "Refresh",
+    "recentRedemptionsNone": "No redemptions found.",
+    "recentRedemptionsLoading": "Loading redemptions...",
+    "recentRedemptionsError": "Error loading redemptions.",
+    "recentRedemptionsUser": "User",
+    "recentRedemptionsReward": "Reward",
+    "recentRedemptionsTime": "Time",
+    "recentRedemptionsCost": "Cost",
+    "rlsBanPolicy": "Error: direct insert blocked by RLS. Please create the RPC `admin_ban_account` in the DB or adjust policies.",
+    "rlsUnbanPolicy": "Error: direct delete blocked by RLS. Please create the RPC `admin_unban_account` in the DB or adjust policies.",
+    "donationTriggersTitle": "Manage Donation Triggers",
+    "donationTriggersIntro": "Here you can manually add, edit, disable or delete donation triggers.",
+    "donationTriggersAdd": "Add trigger",
+    "donationTriggersNone": "No triggers yet.",
+    "donationTriggersPrice": "Price",
+    "donationTriggersDescription": "Description",
+    "donationTriggersText": "Text (Modal)",
+    "donationTriggersAudioUrl": "Audio URL",
+    "donationTriggersSortOrder": "Sort order",
+    "donationTriggersEnabled": "Trigger enabled",
+    "donationTriggersDisabled": "Trigger disabled",
+    "donationTriggersInactive": "inactive",
+    "donationTriggersDisableBtn": "Disable",
+    "donationTriggersEnableBtn": "Enable",
+    "donationTriggersSaved": "Trigger saved!",
+    "donationTriggersDeleted": "Trigger deleted!",
+    "donationTriggersErrorSaving": "Error saving trigger: {{msg}}",
+    "donationTriggersErrorDeleting": "Error deleting trigger: {{msg}}",
+    "donationTriggersDeleteConfirmTitle": "Delete trigger?",
+    "donationTriggersDeleteConfirmMsg": "Are you sure you want to delete the trigger \"{{desc}}\"? This action cannot be undone.",
+    "donationTriggersDeleteConfirmLabel": "Delete",
+    "donationTriggersAddTitle": "Add new trigger",
+    "donationTriggersEditTitle": "Edit trigger",
+    "donationTriggersIdLabel": "Trigger ID (slug)",
+    "donationTriggersAmountValue": "Amount (numeric)",
+    "donationTriggersDescriptionPlaceholder": "e.g. KnockKnock",
+    "donationTriggersTextPlaceholder": "e.g. Knock Knock plays 🚪",
+    "donationTriggersEnabledLabel": "Enabled",
+    "donationTriggersSaveBtn": "Save",
+    "donationTriggersCancelBtn": "Cancel",
+    "donationTriggersRequiredFields": "Trigger ID, price and description are required fields."
+  },
+  "clipVotingPage": {
+    "title": "Clip of the Month – Voting",
+    "intro": "Vote for your favourite clip of the month! You have one vote per round."
+  },
+  "clipVoting": {
+    "loading": "Loading voting data…",
+    "noRound": "No voting round is currently active. The next round starts on the 22st 🎬",
+    "vote": "Vote",
+    "voted": "Voted",
+    "votes": "votes",
+    "voteNow": "Cast your vote now!",
+    "voteHint": "Pick your favourite clip!",
+    "alreadyVoted": "You have already voted.",
+    "voteSuccess": "Vote cast! ✅",
+    "loginToVote": "Sign in with Twitch to cast your vote.",
+    "roundPending": "The next round starts soon…",
+    "roundCompleted": "Round over – here are the results!",
+    "monthlyWinner": "Clip of the Month {{month}}/{{year}}",
+    "yearlyWinner": "Clip of the Year {{year}}",
+    "phase": {
+      "loading": "Loading…",
+      "no-round": "No voting",
+      "round1-active": "Round 1 – All Clips",
+      "round1-results": "Top 10 – Round 1 Results",
+      "round2-active": "Round 2 – Top 10",
+      "round2-results": "Clip of the Month",
+      "yearly-active": "Clip of the Year – Voting",
+      "yearly-results": "Clip of the Year",
+      "between-rounds": "Between rounds"
+    },
+    "error": {
+      "not_authenticated": "You must be signed in.",
+      "round_not_active": "Voting is not active.",
+      "already_voted": "You have already voted in this round.",
+      "clip_not_in_round": "This clip is not in the current round.",
+      "round_not_found": "Round not found."
+    },
+    "confirmVote": "Are you sure you want to vote for this clip?",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+  },
+  "bartclicker": {
+    "stats": {
+      "beards": "Beard Hairs",
+      "perSecond": "Per Second",
+      "rebirth": "Rebirth",
+      "totalEver": "Total Ever",
+      "currentEnergy": "Current Energy",
+      "cps": "CPS",
+      "activeBuffs": "Active Buffs",
+      "relicsUnlocked": "Relics Unlocked",
+      "rebirthMultiplier": "Rebirth Multiplier"
+    },
+    "units": {
+      "thousand": "thousand",
+      "thousandShort": "K",
+      "million": "million",
+      "millionShort": "M",
+      "billion": "billion",
+      "billionShort": "B",
+      "trillion": "trillion",
+      "trillionShort": "T"
+    },
+    "tabs": {
+      "shop": "🛒 Shop",
+      "leaderboard": "🏆 Leaderboard",
+      "stats": "📊 Statistics"
+    },
+    "shopTabs": {
+      "passive": "💧 Passive",
+      "click": "💪 Click",
+      "booster": "⚡ Booster",
+      "relics": "💎 Relics",
+      "autobuyer": "🤖 Auto",
+      "offline": "🌙 Offline"
+    },
+    "rebirth": {
+      "button": "🔄 Rebirth",
+      "description": "Double your multiplier and start fresh! Your beard will grow longer!",
+      "multiplierBoost": "Multiplier ×{{multiplier}}",
+      "cost": "Cost: {{cost}} beard hairs",
+      "spendWarning": "⚠️ Spending rebirths lowers your multiplier! (Current:"
+    },
+    "booster": {
+      "turboBoost": "Turbo Boost",
+      "turboEffect": "2x CPS for 1 min",
+      "clickMadness": "Click Madness",
+      "clickEffect": "3x Clicks for 45s",
+      "luckyBonus": "Lucky Bonus",
+      "luckyEffect": "+50% for 30s",
+      "riskWarning": "⚠️ 20% risk of debuff"
+    },
+    "relics": {
+      "ancientComb": "Ancient Comb",
+      "ancientEffect": "+10% CPS",
+      "magicalOil": "Magical Beard Oil",
+      "oilEffect": "+15% Click Power",
+      "goldenBeard": "Golden Beard",
+      "goldenEffect": "+25% All",
+      "timeOil": "Time-Traveling Beard Oil",
+      "timeEffect": "+50% Offline",
+      "unlocked": "✅ Unlocked"
+    },
+    "autobuyer": {
+      "autoClicker": "🤖 Auto Clicker",
+      "autoClickerDesc": "Costs: 10 Rebirths",
+      "autoClickerBoostInfo": "The click boost also applies to the auto clicker!",
+      "autoClickerEnable": "✅ Enable",
+      "autoClickerDisable": "❌ Disable",
+      "upgradebuyer": "📈 Auto Upgrade Buyer",
+      "upgradebuyerDesc": "Costs: 10 Rebirths",
+      "youHave": "You have: {{count}} Rebirths",
+      "multiplierAfterPurchase": "Multiplier after purchase: ×{{multiplier}}"
+    },
+    "leaderboard": {
+      "title": "🏆 Top Players",
+      "subtitle": "Best Bartclicker Players (All Time)",
+      "rank": "📊",
+      "player": "Player",
+      "score": "💰",
+      "rebirths": "🔄",
+      "loading": "📊 Loading leaderboard...",
+      "empty": "📊 No players on the leaderboard yet"
+    },
+    "buttons": {
+      "max": "Max",
+      "buy": "Buy",
+      "unlocked": "Unlocked"
+    },
+    "offline": {
+      "shopTitle": "🌙 Offline Earnings Upgrades",
+      "shopDesc": "Improve your earnings while you are offline. Base rate: 10% of your CPS, max 8 hours.",
+      "currentRate": "Current Offline Rate: {{rate}}%",
+      "maxTime": "Maximum Offline Time: 8 Hours",
+      "upgradesOwned": "Upgrades: {{current}}/{{max}}",
+      "upgradeEffect": "+10% Offline Earnings",
+      "buyUpgrade": "Buy +10% Offline ({{cost}} Rebirths)",
+      "maxUpgrades": "Maximum upgrades reached!",
+      "welcomeBack": "Welcome back!",
+      "earned": "You earned {{amount}} beard hairs while you were away ({{time}}).",
+      "timeHoursMinutes": "{{hours}}h {{minutes}}min",
+      "timeMinutes": "{{minutes}}min",
+      "youHave": "You have: {{count}} Rebirths"
+    },
+    "autoBuyTitle": "Auto buy",
+    "clickBlocked": "Clicking is currently blocked!"
+  },
+  "onlybart": {
+    "filter": {
+      "all": "All",
+      "media": "Media",
+      "photos": "Photos",
+      "videos": "Videos"
+    },
+    "create": {
+      "placeholder": "What's on your mind?",
+      "submit": "Post",
+      "videoPrompt": "Enter unlisted YouTube video URL:",
+      "videoPromptTitle": "YouTube Video",
+      "failedToPost": "Failed to create post"
+    },
+    "confirmDelete": "Delete this post?",
+    "confirmDeleteComment": "Delete this comment?",
+    "accessDenied": {
+      "title": "Access Restricted",
+      "message": "Only Subscribers, VIPs, and Moderators have access to OnlyBart.",
+      "subHint": "Are you a subscriber? Please ensure you are logged in with the correct account."
+    },
+    "notLoggedIn": "Log in with Twitch to check if you have access to OnlyBart.",
+    "noPosts": "No posts yet. Be the first to see something amazing!",
+    "comment": {
+      "placeholder": "Write a comment...",
+      "send": "send"
+    },
+    "image": {
+      "close": "Close",
+      "viewFullSize": "View full size"
+    }
+  },
+  "common": {
+    "loading": "Loading …",
+    "close": "Close"
+  },
+  "sync": {
+    "exclusionName": "Name",
+    "exclusionTwitchId": "Twitch ID",
+    "exclusionSince": "Excluded since"
+  },
+  "pointsAndRewardSection": {
+    "deinePunkte": "Your points",
+    "punkte": "points",
+    "jetztEinloesen": "Redeem now",
+    "laedt": "Loading...",
+    "zurueck": "Back",
+    "fehlerBeimLadenDerPunkte": "Error loading points",
+    "fehlerBeimLadenDerRewards": "Error loading rewards",
+    "fehlerBeimEinloesen": "Error redeeming: {{msg}}",
+    "erfolgreichEingeloest": "Successfully redeemed!",
+    "deineNachricht": "Your message...",
+    "costPoints": "{{cost}} points",
+    "globalGesperrt": "Globally locked",
+    "cooldown": "Cooldown: {{sec}}s",
+    "cooldownAktiv": "Cooldown active. {{sec}}s left",
+    "einmalProStream": "This reward can only be redeemed once per stream.",
+    "unbekannterFehler": "An unknown error occurred: {{err}}",
+    "unbekannteResponse": "Unknown response from server",
+    "ungueltigeResponse": "Invalid response from server",
+    "pointsRegionLabel": "Channel points and rewards",
+    "rewardGridLabel": "Available rewards",
+    "redeemButton": "Redeem reward: {{name}}",
+    "backToRewards": "Back to rewards list",
+    "ttsInputLabel": "Enter TTS message",
+    "pointsDisplay": "{{points}} points available",
+    "rewardDeaktiviert": "This reward is currently disabled."
+  },
+  "notFound": {
+    "confusedMessages": [
+      "The beard got lost…",
+      "No beard grows here.",
+      "This page has been shaved.",
+      "404 – Beard not found.",
+      "Even the beard doesn't know where this is."
+    ],
+    "hint": "(Click the beard for more wisdom)"
+  },
+  "rewards": {
+    "foo": {
+      "name": "Reward Foo",
+      "desc": "This is a sample reward."
+    },
+    "bar": {
+      "name": "Reward Bar",
+      "desc": "Another reward."
+    },
+    "rewardSourceLabel": "Source",
+    "rewardMediaUrlLabel": "Media URL",
+    "rewardShowYoutubeVideoLabel": "Show YouTube Video",
+    "rewardDescriptionLabel": "Description",
+    "rewardCustomImageUrlLabel": "Custom Image URL",
+    "rewardTextLabel": "TTS Text",
+    "rewardDurationLabel": "Duration (seconds)",
+    "rewardOncePerStreamLabel": "Once per stream"
+  },
+  "banned": {
+    "title": "Account banned",
+    "message": "Your account has been banned. If you have questions, please contact support."
+  },
+  "home": "Home"
+}

@@ -1,0 +1,114 @@
+.settings-bar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  background: var(--color-bg, #18181b);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1rem 1rem 1rem 1rem;
+  top: 0 !important;
+  /* Höhe als Variable für globalen Abstand bereitstellen */
+  --settingsbar-height: calc(2rem + 24px); /* 2rem Padding (oben+unten) + ca. 24px Zeilenhöhe */
+}
+
+.settings-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.settings-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.settings-lang-btn--mobile {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .settings-bar {
+    position: sticky;
+    top: 0 !important;
+    z-index: 1001;
+    background: var(--color-bg, #18181b);
+    justify-content: space-between;
+    padding: 1rem 1rem 1rem 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --settingsbar-height: calc(2rem + 24px); /* gleiche Höhe wie Desktop */
+  }
+
+  .settings-left {
+    flex: 1 1 auto;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .settings-btn-text {
+    display: none;
+  }
+
+  .settings-select--desktop {
+    display: none;
+  }
+
+  .settings-lang-btn--mobile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.settings-btn {
+  padding: 0.4em 0.8em;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: var(--color-btn-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+.settings-btn:hover {
+  border-color: #646cff;
+}
+
+.settings-select {
+  padding: 0.4em 0.6em;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: var(--color-btn-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+.settings-select:hover {
+  border-color: #646cff;
+}
+
+.settings-home-link {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  color: var(--color-text, #fff);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.settings-home-link:hover {
+  color: #646cff;
+}
+
+@media (max-width: 720px) {
+  .settings-home-link {
+    margin-right: 0.5rem;
+  }
+}

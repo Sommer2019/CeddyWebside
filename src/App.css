@@ -1,0 +1,37 @@
+#root {
+  width: 100%;
+}
+
+.landing-container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  padding-top: var(--settingsbar-height, 64px); /* Abstand für SettingsBar */
+}
+
+@media (max-width: 720px) {
+  .landing-container {
+    padding-top: 0 !important;
+  }
+}
+
+/* ── Mobile visibility control ── */
+@media (max-width: 720px) {
+  .landing-container[data-tab="live"] .section-live { display: block; }
+  .landing-container[data-tab="live"] .section-links { display: none; }
+  .landing-container[data-tab="live"] .section-games { display: none; }
+  .landing-container[data-tab="live"] .section-clips { display: none; }
+  .landing-container[data-tab="live"] .section-partners { display: none; }
+
+  .landing-container[data-tab="links"] .section-live { display: none; }
+  .landing-container[data-tab="links"] .section-links { display: block; }
+  .landing-container[data-tab="links"] .section-games { display: none; }
+  .landing-container[data-tab="links"] .section-clips { display: block; }
+  .landing-container[data-tab="links"] .section-partners { display: block; }
+
+  .landing-container[data-tab="games"] .section-live { display: none; }
+  .landing-container[data-tab="games"] .section-links { display: none; }
+  .landing-container[data-tab="games"] .section-games { display: block; }
+  .landing-container[data-tab="games"] .section-clips { display: none; }
+  .landing-container[data-tab="games"] .section-partners { display: none; }
+}

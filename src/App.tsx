@@ -1,0 +1,156 @@
+import {Routes, Route, Navigate, useLocation, BrowserRouter} from 'react-router-dom'
+import {useLayoutEffect} from 'react'
+import SettingsBar from './components/SettingsBar/SettingsBar.tsx'
+import CookieBanner from './components/CookieBanner/CookieBanner'
+import PageTracker from './components/PageTracker'
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+import ModeratorRoute from './components/ModeratorRoute/ModeratorRoute'
+import BroadcasterRoute from './components/BroadcasterRoute/BroadcasterRoute'
+import HomePage from './pages/HomePage'
+import ImpressumPage from './pages/ImpressumPage'
+import DatenschutzPage from './pages/DatenschutzPage'
+import StreamplanPage from './pages/StreamplanPage/StreamplanPage'
+import StreamelementsPage from './pages/StreamelementsPage'
+import BartclickerPage from './pages/BartclickerPage'
+import ClipVotingPage from './pages/ClipVotingPage'
+import ModeratePage from './pages/ModeratePage'
+import ModerateVotingPage from './pages/ModerateVotingPage'
+import ModerateStatisticsPage from './pages/ModerateStatisticsPage/ModerateStatisticsPage'
+import ModerateSettingsPage from './pages/ModerateSettingsPage'
+import OnlyBartPage from './pages/OnlyBartPage/OnlyBartPage'
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
+import ModerateAccountPage from './pages/ModerateAccountPage'
+import ModerateDonationTriggersPage from './pages/ModerateDonationTriggersPage'
+import './App.css'
+import siteConfig from "./config/siteConfig.ts";
+import * as React from "react";
+import { useIsBanned } from './hooks/useIsBanned';
+import { useTranslation } from 'react-i18next';
+
+// Komponente für echte Browser-Redirects zu statischen HTML-Dateien
+const RedirectToHtml: React.FC<{ to: string }> = ({ to }) => {
+    useLayoutEffect(() => {
+        window.location.href = to
+    }, [to])
+    return null
+}
+const {channel} = siteConfig.twitch
+const {impressum, redirects} = siteConfig
+const getLink = (platform: string) => siteConfig.links.find(l => l.id === platform)?.url || "/";
+const externalRedirects: Record<string, string> = {
+    ...redirects,
+    "/insta": getLink("instagram"),
+    "/instagram": getLink("instagram"),
+    "/yt": getLink("youtube"),
+    "/youtube": getLink("youtube"),
+    "/dc": getLink("discord"),
+    "/discord": getLink("discord"),
+    "/tiktok": getLink("tiktok"),
+    "/twitch": `https://www.twitch.tv/${channel}`,
+};
+
+const ExternalRedirectHandler = () => {
+    const { pathname } = useLocation();
+
+    useLayoutEffect(() => {
+        const target = externalRedirects[pathname];
+        if (target) {
+            // Wenn der Link intern ist (fängt mit / an, aber nicht //) dann nutzen wir location.href,
+            // was zu einem vollen Reload führt, oder wir machen einen React Router Redirect.
+            // Die redirects im siteConfig sind meist extern (http...).
+            window.location.href = target;
+        }
+    }, [pathname]);
+
+    return null;
+};
+
+function App() {
+    const { isBanned, loading: banLoading } = useIsBanned();
+    const { t } = useTranslation();
+
+    useLayoutEffect(() => {
+        // Hier könnte man Analytics oder andere Effekte triggern
+    }, []);
+
+    if (banLoading) {
+        return (
+            <div style={{ textAlign: 'center', padding: '40px 20px' }}>
+                <div className="auth-spinner" />
+                <p>{t('auth.loading')}</p>
+            </div>
+        );
+    }
+    if (isBanned) {
+        return (
+            <div style={{ textAlign: 'center', padding: '40px 20px' }}>
+                <div className="auth-gate-icon" style={{ fontSize: 48 }}>⛔</div>
+                <h1>{t('banned.title', 'Account gesperrt')}</h1>
+                <p>{t('banned.message', 'Dein Account wurde gesperrt. Bei Fragen wende dich bitte an den Support.')}</p>
+                <a href={`mailto:${impressum.email}?subject=Gebannt`} style={{ color: '#007bff', textDecoration: 'underline' }}>Support</a>
+            </div>
+        );
+    }
+
+    return (
+        <BrowserRouter>
+            <SettingsBar/>
+            <PageTracker/>
+            <Routes>
+                {/* ── Externe Links → Redirect ── */}
+                {Object.keys(externalRedirects).map((path) => (
+                    <Route key={path} path={path} element={<ExternalRedirectHandler />} />
+                ))}
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="/impressum" element={<ImpressumPage/>}/>
+                <Route path="/datenschutz" element={<DatenschutzPage/>}/>
+                <Route path="/streamplan" element={<StreamplanPage/>}/>
+                <Route path="/streamelements" element={<StreamelementsPage/>}/>
+
+                {/* ── Login zum Aufrufen nötig ── */}
+                <Route path="/bartclicker" element={<ProtectedRoute><BartclickerPage/></ProtectedRoute>}/>
+
+                {/* ── Seite öffentlich, Voting braucht Login ── */}
+                <Route path="/clipdesmonats" element={<ClipVotingPage/>}/>
+
+                {/* ── Moderatoren-Bereich (Twitch-Mods + Streamer) ── */}
+                <Route path="/moderate" element={<ModeratorRoute><ModeratePage/></ModeratorRoute>}/>
+                <Route path="/moderate/voting" element={<ModeratorRoute><ModerateVotingPage/></ModeratorRoute>}/>
+                <Route path="/moderate/statistics"
+                       element={<ModeratorRoute><ModerateStatisticsPage/></ModeratorRoute>}/>
+                <Route path="/moderate/twitch"
+                       element={<RedirectToHtml to={`https://www.twitch.tv/moderator/${channel}`}/>}/>
+                <Route path="/moderate/settings"
+                       element={<BroadcasterRoute><ModerateSettingsPage/></BroadcasterRoute>}/>
+                <Route path="/moderate/account"
+                       element={<ModeratorRoute><ModerateAccountPage/></ModeratorRoute>}/>
+                <Route path="/moderate/triggers"
+                       element={<ModeratorRoute><ModerateDonationTriggersPage/></ModeratorRoute>}/>
+
+                {/* ── Alternative Pfade (werden nun auch großteils oben im externalRedirects / siteConfig behandelt, aber hier als Fallbacks falls intern gewünscht) ── */}
+                <Route path="/actuator/data" element={<Navigate to="/moderate/statistics" replace/>}/>
+                <Route path="/se" element={<Navigate to="/streamelements" replace/>}/>
+                <Route path="/s" element={<Navigate to="/streamplan" replace/>}/>
+                <Route path="/ob" element={<Navigate to="/onlybart" replace/>}/>
+                <Route path="/bc" element={<Navigate to="/bartclicker" replace/>}/>
+                <Route path="/cdm" element={<Navigate to="/clipdesmonats" replace/>}/>
+
+                {/* ── New "OnlyBart" Page ── */}
+                <Route path="/onlybart" element={<OnlyBartPage/>}/>
+                <Route path="/onlybart/*" element={<Navigate to="/onlybart" replace/>}/>
+
+                {/* ── Custom Wünsche (werden nun ebenfalls über siteConfig externalRedirects abgefangen) ── */}
+                <Route path="/rp" element={<RedirectToHtml to="https://github.com/HD1920x1080Media/Minecraft-Ressource-Pack/archive/refs/tags/latest.zip"/>}/>
+                <Route path="/ressourcepack" element={<RedirectToHtml to="https://github.com/HD1920x1080Media/Minecraft-Ressource-Pack/archive/refs/tags/latest.zip"/>}/>
+                <Route path="/tanggle" element={<RedirectToHtml to="http://tng.gl/c/hd1920x1080"/>}/>
+                <Route path="/puzzle" element={<RedirectToHtml to="http://tng.gl/c/hd1920x1080"/>}/>
+                <Route path="/nclip" element={<RedirectToHtml to="https://nclip.io/page/hd1920x1080"/>}/>
+
+                <Route path="*" element={<NotFoundPage/>}/>
+            </Routes>
+            <CookieBanner/>
+        </BrowserRouter>
+    )
+}
+
+export default App

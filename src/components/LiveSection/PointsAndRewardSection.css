@@ -1,0 +1,203 @@
+.points-reward-section {
+  background: var(--box-gradient);
+  border: 1px solid var(--box-border);
+  border-radius: 16px;
+  padding: 20px;
+  max-width: none;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+@media (min-width: 901px) {
+  /* Auf Desktop: Punkte-Section auf volle Breite von Stream+Chat */
+  .points-reward-section {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Auf Tablet/Mobile: wieder max-width */
+  .points-reward-section {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .points-reward-section {
+    padding: 8px;
+  }
+}
+
+.points-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.points-header span {
+  font-size: 0.9rem;
+  color: var(--muted);
+  display: block;
+}
+
+.points-amount {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+/* Grid-Layout: 5 Spalten auf Desktop */
+.reward-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+@media (max-width: 900px) {
+  .reward-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .reward-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.reward-card {
+  aspect-ratio: 1 / 1;
+  background: var(--color-btn-bg);
+  border: 1px solid var(--box-border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 8px;
+  min-width: 0;
+  min-height: 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .reward-card {
+    padding: 4px;
+    font-size: 0.75rem;
+    border-radius: 8px;
+    min-height: 48px;
+    min-width: 48px;
+    max-width: 100%;
+  }
+  .reward-card-title {
+    font-size: 0.75rem;
+    margin-bottom: 2px;
+  }
+  .reward-card-cost {
+    font-size: 0.65rem;
+  }
+}
+
+.reward-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.reward-card-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.reward-card-cost {
+  font-size: 0.75rem;
+  color: var(--accent);
+  opacity: 0.9;
+}
+
+/* Detail Ansicht */
+.reward-detail-view {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.selected-reward-info {
+  text-align: center;
+  padding: 10px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+}
+
+.tts-input {
+  width: 100%;
+  background: var(--color-btn-bg);
+  color: var(--color-text);
+  border: 2px solid var(--box-border);
+  border-radius: 10px;
+  padding: 12px; /* Größeres Textfeld */
+  font-size: 1rem;
+}
+
+.tts-input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+:root {
+  --reward-card-dark-text: #fff;
+  --reward-card-dark-bg: #181828;
+  --reward-card-dark-border: #3a3a4d;
+  --reward-card-dark-muted: #bdbdf7;
+}
+
+[data-theme="dark"] .points-reward-section,
+[data-theme="dark"] .reward-card,
+[data-theme="dark"] .selected-reward-info,
+[data-theme="dark"] .tts-input {
+  color: var(--reward-card-dark-text) !important;
+  background: var(--reward-card-dark-bg) !important;
+  border-color: var(--reward-card-dark-border) !important;
+}
+[data-theme="dark"] .reward-card-cost,
+[data-theme="dark"] .back-btn {
+  color: var(--reward-card-dark-muted) !important;
+}
+[data-theme="dark"] .reward-card-title {
+  color: #fff !important;
+}
+[data-theme="dark"] .tts-input {
+  color: #fff !important;
+  background: #23233a !important;
+  border-color: #4d4d7c !important;
+}
+[data-theme="dark"] .points-amount {
+  color: var(--accent) !important;
+}
