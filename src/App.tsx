@@ -33,6 +33,8 @@ const RedirectToHtml: React.FC<{ to: string }> = ({ to }) => {
 }
 const {channel} = siteConfig.twitch
 const {redirects} = siteConfig
+const supportEmail =
+    siteConfig.links.find((link) => link.id === 'email')?.url.replace(/^mailto:/, '').split('?')[0] || 'support@example.com'
 const getLink = (platform: string) => siteConfig.links.find(l => l.id === platform)?.url || "/";
 const externalRedirects: Record<string, string> = {
     ...redirects,
@@ -84,7 +86,7 @@ function App() {
                 <div className="auth-gate-icon" style={{ fontSize: 48 }}>⛔</div>
                 <h1>{t('banned.title', 'Account gesperrt')}</h1>
                 <p>{t('banned.message', 'Dein Account wurde gesperrt. Bei Fragen wende dich bitte an den Support.')}</p>
-                <a href={`mailto:${impressum.email}?subject=Gebannt`} style={{ color: '#007bff', textDecoration: 'underline' }}>Support</a>
+                <a href={`mailto:${supportEmail}?subject=Gebannt`} style={{ color: '#007bff', textDecoration: 'underline' }}>Support</a>
             </div>
         );
     }
