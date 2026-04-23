@@ -49,24 +49,6 @@ export default function HomePage() {
           </SectionBox>
         </div>
 
-        {/* ── Clips & Shorts ── */}
-        <div className="section-clips">
-          <SectionBox title={t('sections.clips')}>
-            {siteConfig.clips.map((item) => (
-              <LinkCard key={item.id} item={item} />
-            ))}
-          </SectionBox>
-        </div>
-
-        {/* ── Partner ── */}
-        <div className="section-partners">
-          <SectionBox title={t('sections.partners')}>
-            {siteConfig.partners.map((item) => (
-              <LinkCard key={item.id} item={item} />
-            ))}
-          </SectionBox>
-        </div>
-
         <Footer />
       </main>
 

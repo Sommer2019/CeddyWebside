@@ -7,9 +7,6 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import ModeratorRoute from './components/ModeratorRoute/ModeratorRoute'
 import BroadcasterRoute from './components/BroadcasterRoute/BroadcasterRoute'
 import HomePage from './pages/HomePage'
-import ImpressumPage from './pages/ImpressumPage'
-import DatenschutzPage from './pages/DatenschutzPage'
-import StreamplanPage from './pages/StreamplanPage/StreamplanPage'
 import StreamelementsPage from './pages/StreamelementsPage'
 import BartclickerPage from './pages/BartclickerPage'
 import ClipVotingPage from './pages/ClipVotingPage'
@@ -35,7 +32,7 @@ const RedirectToHtml: React.FC<{ to: string }> = ({ to }) => {
     return null
 }
 const {channel} = siteConfig.twitch
-const {impressum, redirects} = siteConfig
+const {redirects} = siteConfig
 const getLink = (platform: string) => siteConfig.links.find(l => l.id === platform)?.url || "/";
 const externalRedirects: Record<string, string> = {
     ...redirects,
@@ -102,9 +99,6 @@ function App() {
                     <Route key={path} path={path} element={<ExternalRedirectHandler />} />
                 ))}
                 <Route path="/" element={<HomePage/>}/>
-                <Route path="/impressum" element={<ImpressumPage/>}/>
-                <Route path="/datenschutz" element={<DatenschutzPage/>}/>
-                <Route path="/streamplan" element={<StreamplanPage/>}/>
                 <Route path="/streamelements" element={<StreamelementsPage/>}/>
 
                 {/* ── Login zum Aufrufen nötig ── */}
@@ -139,12 +133,6 @@ function App() {
                 <Route path="/onlybart" element={<OnlyBartPage/>}/>
                 <Route path="/onlybart/*" element={<Navigate to="/onlybart" replace/>}/>
 
-                {/* ── Custom Wünsche (werden nun ebenfalls über siteConfig externalRedirects abgefangen) ── */}
-                <Route path="/rp" element={<RedirectToHtml to="https://github.com/HD1920x1080Media/Minecraft-Ressource-Pack/archive/refs/tags/latest.zip"/>}/>
-                <Route path="/ressourcepack" element={<RedirectToHtml to="https://github.com/HD1920x1080Media/Minecraft-Ressource-Pack/archive/refs/tags/latest.zip"/>}/>
-                <Route path="/tanggle" element={<RedirectToHtml to="http://tng.gl/c/hd1920x1080"/>}/>
-                <Route path="/puzzle" element={<RedirectToHtml to="http://tng.gl/c/hd1920x1080"/>}/>
-                <Route path="/nclip" element={<RedirectToHtml to="https://nclip.io/page/hd1920x1080"/>}/>
 
                 <Route path="*" element={<NotFoundPage/>}/>
             </Routes>

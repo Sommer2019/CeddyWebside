@@ -85,14 +85,8 @@ export interface StreamElementsConfig {
 export interface SiteConfig {
   profile: ProfileConfig
   twitch: TwitchConfig
-  impressum: ImpressumConfig
-  streamplan: StreamplanConfig
-  streamelements: StreamElementsConfig
   links: LinkItem[]
   games: LinkItem[]
-  clips: LinkItem[]
-  partners: LinkItem[]
-  footerLinks: Link[]
   moderatorLink: Link
   copyrightHolder: string
   onlyBart: OnlyBartConfig  // Should contain the default "OnlyBart" for this project
@@ -102,9 +96,9 @@ export interface SiteConfig {
 const siteConfig: SiteConfig = {
   // ── Profil ──
   profile: {
-    name: 'HD1920x1080',
+    name: 'CurlyCeddy',
     subtitleKey: 'hero.subtitle',
-    image: '/img/logos/HDProfile.webp',
+    image: 'https://static-cdn.jtvnw.net/jtv_user_pictures/648d9b2c-9ec5-4d90-91b4-8c0ae772a60a-profile_image-70x70.png',
   },
 
   // ── Twitch ──
@@ -121,97 +115,8 @@ const siteConfig: SiteConfig = {
     icsUrl: '/api/calendar.ics',
   },
 
-  // ── Impressum ──
-  impressum: {
-    name: 'Stefan Slapnik',
-    company: 'FullHD Media',
-    street: 'Kolpingstraße 9',
-    city: '95615 Marktredwitz',
-    email: 'Admin@HD1920x1080.de',
-  },
-
-  // ── Streamplan ──
-  streamplan: {
-    icsUrl: 'https://export.kalender.digital/ics/0/4ccef74582e0eb8d7026/twitchhd1920x1080.ics',
-    categories: [
-      {
-        id: 'gog',
-        labelKey: 'streamplan.categories.gog',
-        url: 'https://export.kalender.digital/ics/4648294/4ccef74582e0eb8d7026/gog-goodoldgames.ics',
-        color: '#d4af37', // Gold/Classic
-      },
-      {
-        id: 'justchatting',
-        labelKey: 'streamplan.categories.justchatting',
-        url: 'https://export.kalender.digital/ics/4648295/4ccef74582e0eb8d7026/justchattingreactioncommunitygames.ics',
-        color: '#a970ff', // Twitch Purple
-      },
-      {
-        id: 'grind',
-        labelKey: 'streamplan.categories.grind',
-        url: 'https://export.kalender.digital/ics/4648296/4ccef74582e0eb8d7026/grindgames.ics',
-        color: '#e91e63', // Pink/Red
-      },
-      {
-        id: 'special',
-        labelKey: 'streamplan.categories.special',
-        url: 'https://export.kalender.digital/ics/4648297/4ccef74582e0eb8d7026/besonderesevent.ics',
-        color: '#ffd700', // Gold/Highlight
-      },
-      {
-        id: 'multiplayer',
-        labelKey: 'streamplan.categories.multiplayer',
-        url: 'https://export.kalender.digital/ics/4648298/4ccef74582e0eb8d7026/multi-playertime.ics',
-        color: '#00bcd4', // Cyan
-      },
-      {
-        id: 'action',
-        labelKey: 'streamplan.categories.action',
-        url: 'https://export.kalender.digital/ics/4649039/4ccef74582e0eb8d7026/actiongames.ics',
-        color: '#ff5722', // Orange
-      },
-    ],
-  },
-
-  // ── StreamElements / Donations ──
-  streamelements: {
-    donationUrl: 'https://streamelements.com/hd1920x1080-5003/tip',
-    triggers: [
-      { id: 'taschengeld', price: '1€ – 1,19€', amountValue: 1.00, descKey: 'donations.taschengeld.desc', textKey: 'donations.taschengeld.text' },
-      { id: 'tts', price: 'ab 1,20€', amountValue: 1.20, descKey: 'donations.tts.desc', textKey: 'donations.tts.text' },
-      { id: 'knock', price: '4,20€', amountValue: 4.20, descKey: 'donations.knock.desc', textKey: 'donations.knock.text', audio: '/audio/knock.mp3' },
-      { id: 'majortom', price: '5,00€', amountValue: 5.00, descKey: 'donations.majortom.desc', textKey: 'donations.majortom.text', audio: '/audio/MajorTom.mp3' },
-      { id: 'scream', price: '6,66€', amountValue: 6.66, descKey: 'donations.scream.desc', textKey: 'donations.scream.text', audio: '/audio/scream.mp3' },
-      { id: 'fliege1', price: '7,77€', amountValue: 7.77, descKey: 'donations.fliege1.desc', textKey: 'donations.fliege1.text', audio: '/audio/Fliege1.mp3' },
-      { id: 'centershock', price: '9,20€', amountValue: 9.20, descKey: 'donations.centershock.desc', textKey: 'donations.centershock.text', audio: '/audio/CenterShock.mp3' },
-      { id: 'yt-sound', price: '10,80€', amountValue: 10.80, descKey: 'donations.ytSound.desc', textKey: 'donations.ytSound.text', audio: '/audio/1080.mp3' },
-      { id: 'fliege2', price: '14,44€', amountValue: 14.44, descKey: 'donations.fliege2.desc', textKey: 'donations.fliege2.text', audio: '/audio/Fliege2.mp3' },
-      { id: '1920', price: '19,20€', amountValue: 19.20, descKey: 'donations.1920.desc', textKey: 'donations.1920.text', audio: '/audio/1920.mp3' },
-      { id: 'fliege3', price: '19,66€', amountValue: 19.66, descKey: 'donations.fliege3.desc', textKey: 'donations.fliege3.text', audio: '/audio/Fliege3.mp3' },
-      //{ id: 'konfetti', price: '22,22€', amountValue: 22.22, descKey: 'donations.konfetti.desc', textKey: 'donations.konfetti.text' },
-      { id: 'hotnuts', price: '25,00€', amountValue: 25.00, descKey: 'donations.hotnuts.desc', textKey: 'donations.hotnuts.text', audio: '/audio/FIRE.mp3' },
-      { id: 'sandwich', price: 'x66,66€', amountValue: 66.66, descKey: 'donations.sandwich.desc', textKey: 'donations.sandwich.text', audio: '/audio/Sandwich.mp3' },
-    ],
-  },
-
   // ── Haupt-Links ──
   links: [
-    {
-      id: 'streamplan',
-      titleKey: 'links.streamplan.title',
-      descKey: 'links.streamplan.desc',
-      url: '/streamplan',
-      icon: '/img/logos/StreamPlan.webp',
-      target: '_self',
-    },
-    {
-      id: 'streamelements',
-      titleKey: 'links.streamelements.title',
-      descKey: 'links.streamelements.desc',
-      url: '/streamelements',
-      icon: '/img/logos/StreamElements.webp',
-      target: '_self',
-    },
     {
       id: 'clipdesmonats',
       titleKey: 'links.clipdesmonats.title',
@@ -224,24 +129,8 @@ const siteConfig: SiteConfig = {
       id: 'youtube',
       titleKey: 'links.youtube.title',
       descKey: 'links.youtube.desc',
-      url: 'https://youtube.com/@hawedereplus',
+      url: 'https://www.youtube.com/@CurlyCeddy',
       icon: '/img/logos/youtube.svg',
-      target: '_blank',
-    },
-    {
-      id: 'tiktok',
-      titleKey: 'links.tiktok.title',
-      descKey: 'links.tiktok.desc',
-      url: 'https://tiktok.com/@hd1920x1080',
-      icon: '/img/logos/tiktok.svg',
-      target: '_blank',
-    },
-    {
-      id: 'instagram',
-      titleKey: 'links.instagram.title',
-      descKey: 'links.instagram.desc',
-      url: 'https://www.instagram.com/hd1920x1080/',
-      icon: '/img/logos/instagram.svg',
       target: '_blank',
     },
     {
@@ -256,7 +145,7 @@ const siteConfig: SiteConfig = {
       id: 'discord',
       titleKey: 'links.discord.title',
       descKey: 'links.discord.desc',
-      url: 'https://discord.gg/Zp5KNqCHzc',
+      url: 'https://discord.gg/9cgUxM34ym',
       icon: '/img/logos/discord.svg',
       target: '_blank',
     },
@@ -264,7 +153,7 @@ const siteConfig: SiteConfig = {
       id: 'email',
       titleKey: 'links.email.title',
       descKey: 'links.email.desc',
-      url: 'mailto:Admin@HD1920x1080.de?subject=Kontaktanfrage',
+      url: 'mailto:curlyceddy@gmail.com?subject=Kontaktanfrage',
       icon: '/img/logos/email.svg',
       target: '_self',
     },
@@ -272,24 +161,6 @@ const siteConfig: SiteConfig = {
 
   // ── Games ──
   games: [
-    {
-      id: 'tanggle',
-      titleKey: 'games.tanggle.title',
-      descKey: 'games.tanggle.desc',
-      url: 'http://tng.gl/c/hd1920x1080',
-      icon: '/img/logos/Puzzle.svg',
-      target: '_blank',
-    },
-    {
-      id: 'resourcepack',
-      titleKey: 'games.resourcepack.title',
-      descKey: 'games.resourcepack.desc',
-      url: 'https://github.com/HD1920x1080Media/Minecraft-Ressource-Pack/archive/refs/tags/latest.zip',
-      icon: '/img/logos/MinecraftRessourcePack.webp',
-      downloadFile:
-        'https://github.com/HD1920x1080Media/Minecraft-Ressource-Pack/archive/refs/tags/latest.zip',
-      downloadName: 'HD1920x1080_V1.10.zip',
-    },
     {
       id: 'bartclicker',
       titleKey: 'games.bartclicker.title',
@@ -300,71 +171,9 @@ const siteConfig: SiteConfig = {
     },
   ],
 
-  // ── Clips & Shorts ──
-  clips: [
-    {
-      id: 'yt-shorts',
-      titleKey: 'clips.ytShorts.title',
-      descKey: 'clips.ytShorts.desc',
-      url: 'https://www.youtube.com/@lesommer2019',
-      icon: '/img/logos/youtube.svg',
-      target: '_blank',
-    },
-    {
-      id: 'tiktok-clips',
-      titleKey: 'clips.tiktokClips.title',
-      descKey: 'clips.tiktokClips.desc',
-      url: 'https://www.tiktok.com/@hawedereshorts',
-      icon: '/img/logos/tiktok.svg',
-      target: '_blank',
-    },
-    {
-      id: 'insta-clips',
-      titleKey: 'clips.instaClips.title',
-      descKey: 'clips.instaClips.desc',
-      url: 'https://www.instagram.com/hawedereshorts/',
-      icon: '/img/logos/instagram.svg',
-      target: '_blank',
-    },
-  ],
-
-  // ── Partner ──
-  partners: [
-    {
-      id: 'yvolve',
-      titleKey: 'partners.yvolve.title',
-      descKey: 'partners.yvolve.desc',
-      url: 'https://yvolve.shop/?bg_ref=cnbZIhbZxH',
-      icon: '/img/logos/Evolve.webp',
-      target: '_blank',
-      discountCode: 'FullHD',
-    },
-    {
-      id: 'nclip',
-      titleKey: 'partners.nclip.title',
-      url: 'https://nclip.io/page/hd1920x1080',
-      icon: '/img/logos/NClip.webp',
-      target: '_blank',
-    },
-    {
-      id: 'frugends',
-      titleKey: 'partners.frugends.title',
-      descKey: 'partners.frugends.desc',
-      url: 'https://frugends.com/?srsltid=AfmBOoqjyBjbK5TWs0tAS4ELgV93XqTXzl84OChVKd93OVkjeWfH8wFT',
-      icon: '/img/logos/Frugends.webp',
-      target: '_blank',
-      discountCode: 'FullHD',
-    },
-  ],
-
   moderatorLink: { labelKey: 'profile.moderate', url: '/moderate' },
 
-  // ── Footer ──
-  footerLinks: [
-    { labelKey: 'footer.impressum', url: '/impressum' },
-    { labelKey: 'footer.datenschutz', url: '/datenschutz' }
-  ],
-  copyrightHolder: 'FullHD Media',
+  copyrightHolder: 'CurlyCeddy',
   
   onlyBart: {
     title: 'OnlyBart',
@@ -373,29 +182,14 @@ const siteConfig: SiteConfig = {
 
   // ── Redirects ──
   redirects: {
-    "/instagram": "https://www.instagram.com/hd1920x1080/",
-    "/insta":  "https://www.instagram.com/hd1920x1080/",
-    "/yt":  "https://youtube.com/@hawedereplus",
-    "/youtube":  "https://youtube.com/@hawedereplus",
-    "/tiktok":  "https://tiktok.com/@hd1920x1080",
-    "/nclip":  "https://nclip.io/page/hd1920x1080",
-    "/puzzle":  "http://tng.gl/c/hd1920x1080",
-    "/tanggle":  "http://tng.gl/c/hd1920x1080",
-    "/discord":   "https://discord.gg/Zp5KNqCHzc",
-    "/dc":   "https://discord.gg/Zp5KNqCHzc",
-    "/cdm":   "https://www.hd1920x1080.de/clipdesmonats",
-    "/cdj":   "https://www.hd1920x1080.de/clipdesjahres",
-    "/rp":   "https://github.com/HD1920x1080Media/Minecraft-Ressource-Pack/archive/refs/tags/latest.zip",
-    "/ressourcepack":   "https://github.com/HD1920x1080Media/Minecraft-Ressource-Pack/archive/refs/tags/latest.zip",
-    "/twitch":   "https://www.twitch.tv/hd1920x1080",
-    "/se":   "https://www.hd1920x1080.de/streamelements",
-    "/s":   "https://www.hd1920x1080.de/streamplan",
-    "/ob":   "https://www.hd1920x1080.de/onlybart",
-    "/c/instagram": "https://www.instagram.com/hawedereshorts/",
-    "/c/insta":  "https://www.instagram.com/hawedereshorts/",
-    "/c/yt":  "https://www.youtube.com/@lesommer2019",
-    "/c/youtube":  "https://www.youtube.com/@lesommer2019",
-    "/c/tiktok":  "https://www.tiktok.com/@hawedereshorts"
+    "/yt":  "https://www.youtube.com/@CurlyCeddy",
+    "/youtube":  "https://www.youtube.com/@CurlyCeddy",
+    "/discord":   "https://discord.gg/9cgUxM34ym",
+    "/dc":   "https://discord.gg/9cgUxM34ym",
+    "/cdm":   "https://www.curlyceddy.de/clipdesmonats",
+    "/cdj":   "https://www.curlyceddy.de/clipdesjahres",
+    "/twitch":   "https://www.twitch.tv/curlyceddy",
+    "/ob":   "https://www.curlyceddy.de/onlybart",
   }
 }
 
