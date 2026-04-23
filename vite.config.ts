@@ -176,7 +176,7 @@ export default defineConfig({
   },
   // Für GitHub Pages mit Custom Domain (z.B. hd1920x1080.de): base: '/'
   // Für GitHub Pages OHNE Custom Domain: base: '/repo-name/'
-  base: '/',
+  base: '/CeddyWebside/',
 
   // Build / Rollup-Tuning: Aufteilen großer Bundles in mehrere Chunks.
   // Dadurch werden einzelne output-Chunks (z. B. vendor) kleiner und die
