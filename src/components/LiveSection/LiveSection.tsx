@@ -1,7 +1,6 @@
 import {useState, useEffect, useRef} from 'react'
 import {useTranslation} from 'react-i18next'
 import siteConfig from '../../config/siteConfig'
-import NextStream from '../NextStream/NextStream'
 import CurrentGame from '../CurrentGame/CurrentGame'
 // import PointsAndRewardSection from './PointsAndRewardSection'
 import {supabase} from '../../lib/supabase'
@@ -135,7 +134,7 @@ export default function LiveSection() {
                 </a>
 
                 {/* ── Offline → nächster Termin ── */}
-                {!showStream && <NextStream/>}
+                {!showStream}
 
                 {/* ── Current Game (only while live) ── */}
                 <CurrentGame isLive={showStream}/>

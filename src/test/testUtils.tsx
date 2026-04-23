@@ -5,15 +5,14 @@ import i18n from 'i18next'
 import { initReactI18next, I18nextProvider } from 'react-i18next'
 import { ToastProvider } from '../context/ToastContext'
 import { ConfirmModalProvider } from '../context/ConfirmModalContext'
-
-import en from '../i18n/locales/en.json'
+import de from '../i18n/locales/de.json'
 
 // Initialise a lightweight i18n instance for tests
 if (!i18n.isInitialized) {
   i18n.use(initReactI18next).init({
-    resources: { en: { translation: en } },
-    lng: 'en',
-    fallbackLng: 'en',
+    resources: { de: { translation: de } },
+    lng: 'de',
+    fallbackLng: 'de',
     interpolation: { escapeValue: false },
   })
 }

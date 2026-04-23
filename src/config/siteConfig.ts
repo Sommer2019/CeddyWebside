@@ -87,6 +87,8 @@ export interface SiteConfig {
   twitch: TwitchConfig
   links: LinkItem[]
   games: LinkItem[]
+  footerLinks: Link[]
+  streamelements: StreamElementsConfig
   moderatorLink: Link
   copyrightHolder: string
   onlyBart: OnlyBartConfig  // Should contain the default "OnlyBart" for this project
@@ -170,6 +172,16 @@ const siteConfig: SiteConfig = {
       target: '_self',
     },
   ],
+
+  footerLinks: [
+    { labelKey: 'footer.impressum', url: '/impressum' },
+    { labelKey: 'footer.datenschutz', url: '/datenschutz' },
+  ],
+
+  streamelements: {
+    donationUrl: 'https://streamelements.com/curlyceddy/tip',
+    triggers: [],
+  },
 
   moderatorLink: { labelKey: 'profile.moderate', url: '/moderate' },
 
